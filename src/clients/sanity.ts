@@ -26,7 +26,7 @@ const removeDrafts = `!(_id in path('drafts.**'))`;
 const postFields = `
     _id,
     title,
-    'date': _createdAt,
+    'date': publishedAt,
     excerpt,
     'slug': slug.current,
     "categories": categories[]->,
