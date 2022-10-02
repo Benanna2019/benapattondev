@@ -1,4 +1,5 @@
 import { DefaultSeo } from "next-seo";
+import Head from "next/head";
 import * as React from "react";
 
 import { baseUrl, defaultSEO } from "../../utils/config/seo"; // defaultSEO from config.
@@ -8,7 +9,7 @@ export function SEO() {
   return (
     <>
       <DefaultSeo {...defaultSEO} />
-      <head>
+      <Head>
         <link rel="icon" href="/static/favicon.ico" sizes="any" />
         <link
           rel="icon"
@@ -35,7 +36,7 @@ export function SEO() {
           content="rgb(23, 23, 23)"
           media="(prefers-color-scheme: dark)"
         />
-      </head>
+      </Head>
     </>
   );
 }

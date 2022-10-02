@@ -18,7 +18,7 @@ export function PostsList() {
   const { data, isLoading, isError } = posts;
   // do my trpc call to get all posts right here
   const [filter, setFilter] = React.useState("published");
-  let [scrollContainerRef, setScrollContainerRef] = React.useState(null);
+  const [scrollContainerRef, setScrollContainerRef] = React.useState(null);
   const { slug } = router.query;
 
   if (isLoading) {
