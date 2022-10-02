@@ -37,7 +37,7 @@ const postFields = `
   `;
 
 export const getAllPosts = (client: SanityClient) => async () => {
-  const allPostsQuery = `*[_type == "post" && ${removeDrafts}] | order(_createdAt desc){
+  const allPostsQuery = `*[_type == "post" && ${removeDrafts}] | order(publishedAt desc){
     ${postFields}
   }`;
   return await fetchRecords(client, allPostsQuery);

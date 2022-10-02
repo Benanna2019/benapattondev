@@ -90,11 +90,6 @@ const speakingData = [
 export function Intro() {
   const featuredArticles = trpc.useQuery(["posts.featuredArticles"]);
   const { data, isLoading, isError } = featuredArticles;
-  console.log(
-    data?.featuredArticles.map((featuredArticle: any) => {
-      console.log("featured article: ", featuredArticle.featuredArticle[0]);
-    })
-  );
   const scrollContainerRef = React.useRef(null);
   const titleRef = React.useRef(null);
 
