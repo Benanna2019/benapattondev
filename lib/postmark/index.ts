@@ -1,11 +1,13 @@
 import * as postmark from "postmark";
 
-import { baseEmail } from "../../config/seo";
+import { baseEmail } from "../../src/utils/config/seo";
 // import { IS_PROD } from '~/graphql/constants'
 
 const IS_PROD = process.env.NODE_ENV === "production";
 
-export const client = new postmark.ServerClient(`process.env.POSTMARK_CLIENT_ID`);
+export const client = new postmark.ServerClient(
+  `process.env.POSTMARK_CLIENT_ID`
+);
 
 interface EmailMeProps {
   subject: string;
