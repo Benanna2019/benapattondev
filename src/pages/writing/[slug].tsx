@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { ListDetailView, SiteLayout } from "../../components/Layouts";
 import PostDetail from "../../components/Writing/PostDetail";

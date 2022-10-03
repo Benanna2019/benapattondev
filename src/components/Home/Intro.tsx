@@ -116,31 +116,34 @@ export function Intro() {
                   <Link href="/writing">
                     <span>writer</span>
                   </Link>
-                  . I&apos;m currently writing a{" "}
+                  . I currently writing a{" "}
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-yala-purple"
                     href="https://careerchangers.co"
                   >
-                    newsletter for career changers{" "}
+                    newsletter{" "}
                   </a>
-                  becoming software developers to help them jobs quicker.
+                  for those thinking about or in process of changing careers to
+                  software developers.
                 </p>
                 <p>
-                  I currently work for,{" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-yala-purple"
-                    href="https://comparecredit.com"
-                  >
-                    CompareCredit
-                  </a>
-                  , on an awesome dev team. I get to work alongside developers
-                  who went to the code school I went to in Charleston, SC called
-                  Jack Russell Coding School.
+                  I love all things javascript and occassionally dabble with
+                  other languages, Go, Rust, Elixir and only watch videos about
+                  C++.
                 </p>
+                <p>
+                  Right now I am loving typescript/jsdoc, incrementally using
+                  functional programming libraries (ramda and lodash), and
+                  expanding my cloud knowledge.
+                </p>
+                <h2 className="mt-5 mb-5">A Little Background</h2>
+                <p>
+                  My aim in life is to care for and love others and to use code,
+                  writing, time, etc to that end.
+                </p>
+
                 <p>
                   Before becoming a software developer I worked in non-profit. I
                   made a living off of fundraising and was able to work with
@@ -149,6 +152,7 @@ export function Intro() {
                   non-profit days are the catalyst for much of my thinking and
                   how I hope to impact the world through software.
                 </p>
+                <h2 className="">Writing Highlights</h2>
                 <div className="flex gap-6 flex-col md:flex-row">
                   {isLoading || isError || !data?.featuredArticles
                     ? null
@@ -157,10 +161,15 @@ export function Intro() {
                           key={featuredArticle.featuredArticle[0]._id}
                           title={featuredArticle.featuredArticle[0].title}
                           slug={featuredArticle.featuredArticle[0].slug.current}
-                          gradient="from-[#076585] to-[#fff]"
+                          gradient="from-[#6441A5] to-[#9D6EFF]"
                         />
                       ))}
                 </div>
+                <Link href="/writing">
+                  <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-yala-purple transition-all h-6">
+                    Read all posts
+                  </a>
+                </Link>
               </div>
             </SectionContent>
           </SectionContainer>

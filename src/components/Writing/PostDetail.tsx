@@ -1,3 +1,4 @@
+import Head from "next/head";
 import * as React from "react";
 import { timestampToCleanTime } from "../../../lib/transformers";
 import { Detail } from "../ListDetail/Detail";
@@ -9,7 +10,6 @@ export default function PostDetail({ postInfo }: any) {
   const titleRef = React.useRef(null);
 
   const { data, isLoading, isError } = postInfo;
-  console.log("the postInfo from PostDetail postInfo: ", postInfo);
 
   if (isLoading) {
     return <Detail.Loading />;
@@ -23,6 +23,11 @@ export default function PostDetail({ postInfo }: any) {
   const publishedAt = timestampToCleanTime({ timestamp: post[0].date });
   return (
     <>
+      <Head>
+        <title>{post[0].title}</title>
+        <meta name={post[0].title} content={post[0].excerpt} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Detail.Container data-cy="post-detail" ref={scrollContainerRef}>
         <TitleBar
           backButton
