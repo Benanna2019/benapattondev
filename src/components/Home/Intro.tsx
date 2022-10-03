@@ -116,7 +116,7 @@ export function Intro() {
                   <Link href="/writing">
                     <span>writer</span>
                   </Link>
-                  . I currently writing a{" "}
+                  . I am currently writing a{" "}
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
