@@ -5,7 +5,7 @@ import { Toast } from "./Toaster";
 
 interface Props {
   children?: any;
-  pageProps: any;
+  pageProps?: any;
 }
 
 const globalNavigationContext = {
@@ -13,7 +13,9 @@ const globalNavigationContext = {
   setIsOpen: (val: boolean) => {},
 };
 
-export const GlobalNavigationContext = React.createContext(globalNavigationContext);
+export const GlobalNavigationContext = React.createContext(
+  globalNavigationContext
+);
 
 export function Providers({ children }: Props) {
   const initialState = {
@@ -32,7 +34,9 @@ export function Providers({ children }: Props) {
       <SEO />
       <Toast />
 
-      <GlobalNavigationContext.Provider value={state}>{children}</GlobalNavigationContext.Provider>
+      <GlobalNavigationContext.Provider value={state}>
+        {children}
+      </GlobalNavigationContext.Provider>
     </>
   );
 }

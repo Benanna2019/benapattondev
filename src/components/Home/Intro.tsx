@@ -138,50 +138,6 @@ export function Intro() {
                   functional programming libraries (ramda and lodash), and
                   expanding my cloud knowledge.
                 </p>
-                <p className="italic font-bold">
-                  Credit where it is due. I borrowed layout initial styles from{" "}
-                  <a
-                    href="https://brianlovin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Brian Lovin
-                  </a>
-                  . Other pieces come with inspiration from{" "}
-                  <a
-                    href="https://swyx.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @Swyx
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://leerob.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Lee Robinson
-                  </a>
-                  , and heavy inspiration use of{" "}
-                  <a
-                    href="https://dayoneapp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Day One Journaling App
-                  </a>
-                  . One of my favorite articles by David Perell is{" "}
-                  <a
-                    href="https://perell.com/essay/imitate-then-innovate/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Imitate, Then Innovate
-                  </a>
-                  , so that is my aim here. Gradually make it my own but start
-                  with something I love.
-                </p>
                 <h2 className="mt-5 mb-5">A Little Background</h2>
                 <p>
                   My aim in life is to care for and love others and to use code,
@@ -219,7 +175,7 @@ export function Intro() {
           </SectionContainer>
 
           <SectionContainer>
-            <SectionTitle>Online</SectionTitle>
+            <SectionTitle>Me on the Interwebs</SectionTitle>
             <SectionContent>
               <div className="flex flex-col space-y-3">
                 <TableRow
@@ -247,7 +203,7 @@ export function Intro() {
           </SectionContainer>
 
           <SectionContainer>
-            <SectionTitle>Where</SectionTitle>
+            <SectionTitle>Location</SectionTitle>
             <SectionContent>
               <Image
                 priority
@@ -267,7 +223,7 @@ export function Intro() {
           </SectionContainer>
 
           <SectionContainer>
-            <SectionTitle>Work</SectionTitle>
+            <SectionTitle>Work Exp</SectionTitle>
             <SectionContent>
               <div className="flex flex-col space-y-3">
                 {workHistory.map((job) => (
@@ -297,6 +253,58 @@ export function Intro() {
                       />
                     ))
                   : null}
+              </div>
+            </SectionContent>
+          </SectionContainer>
+          <SectionContainer>
+            <SectionTitle />
+            <SectionContent>
+              <div className="text-primary prose">
+                <h2 className="pt-2">Credit and Thanks</h2>
+                <p className="italic font-bold pt-4">
+                  Credit where it is due. I borrowed layout and styles from{" "}
+                  <a
+                    href="https://brianlovin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Brian Lovin
+                  </a>{" "}
+                  and inspiration from daily use of{" "}
+                  <a
+                    href="https://dayoneapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Day One Journaling App
+                  </a>
+                  . Other pieces of the site were inspired from{" "}
+                  <a
+                    href="https://swyx.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Swyx
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://leerob.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lee Robinson
+                  </a>
+                  . One of my favorite articles by David Perell is{" "}
+                  <a
+                    href="https://perell.com/essay/imitate-then-innovate/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Imitate, Then Innovate
+                  </a>
+                  , so that is my aim here. Gradually make it my own but start
+                  with something I love.
+                </p>
               </div>
             </SectionContent>
           </SectionContainer>
