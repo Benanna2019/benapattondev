@@ -1,5 +1,6 @@
 import Link from "next/link";
 import * as React from "react";
+import { getDate, parseISO, format } from "date-fns";
 
 interface Props {
   title?: string;
@@ -7,7 +8,7 @@ interface Props {
   href: string;
   as?: string;
   description?: string | React.ReactElement | null;
-  byline?: string | React.ReactElement;
+  byline: string;
   leadingAccessory?: React.ReactElement;
   onClick?: (e: any) => void;
 }
@@ -22,6 +23,7 @@ export function ListItem({
   leadingAccessory,
   onClick,
 }: Props) {
+  const formattedDate = getDate(parseISO(byline));
   return (
     <Link href={href} as={as}>
       <a
@@ -33,36 +35,45 @@ export function ListItem({
         }`}
       >
         {leadingAccessory && <>{leadingAccessory}</>}
-        <div className="flex flex-col justify-center space-y-1">
-          <div
-            className={`font-medium line-clamp-3 ${
-              active ? "text-white font-bold" : "text-gray-1000 dark:text-white"
-            }`}
-          >
-            {title}
-          </div>
-          {description && (
-            <div
-              className={`line-clamp-2 ${
-                active
-                  ? "text-white text-opacity-80"
-                  : "text-gray-1000 text-opacity-60 dark:text-white"
-              }`}
-            >
-              {description}
-            </div>
-          )}
+        <div className="flex justify-between space-x-5 space-y-1">
           {byline && (
             <div
-              className={`line-clamp-1  ${
+              className={`flex flex-col justify-center text-center w-18 bg-gray-800 rounded-lg ${
                 active
                   ? "text-white text-opacity-90"
                   : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
               }`}
             >
-              {byline}
+              <div className="text-xs w-12 pt-2">
+                {format(parseISO(byline), "MMM")}
+              </div>
+              <div className="text-2xl text-slate-100 font-semibold w-12 pb-2">
+                {formattedDate}
+              </div>
             </div>
           )}
+          <div className="flex flex-col justify-center">
+            <div
+              className={`font-medium line-clamp-1 ${
+                active
+                  ? "text-white font-bold"
+                  : "text-gray-1000 dark:text-white"
+              }`}
+            >
+              {title}
+            </div>
+            {description && (
+              <div
+                className={`line-clamp-1 ${
+                  active
+                    ? "text-white text-opacity-80"
+                    : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                }`}
+              >
+                {description}
+              </div>
+            )}
+          </div>
         </div>
       </a>
     </Link>

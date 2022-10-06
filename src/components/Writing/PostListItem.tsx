@@ -16,8 +16,8 @@ export const PostListItem = React.memo<Props>(({ post, active }) => {
       key={post._id}
       href={`/writing/${encodeURIComponent(post.slug)}`}
       title={post.title}
-      description={null}
-      byline={post.date ? publishedAt.formatted : "Draft"}
+      description={post.excerpt}
+      byline={post.date}
       active={active}
     />
   );
