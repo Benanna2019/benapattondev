@@ -8,7 +8,7 @@ interface Props {
   href: string;
   as?: string;
   description?: string | React.ReactElement | null;
-  byline: string;
+  byline: string | React.ReactElement;
   leadingAccessory?: React.ReactElement;
   onClick?: (e: any) => void;
 }
@@ -23,7 +23,7 @@ export function ListItem({
   leadingAccessory,
   onClick,
 }: Props) {
-  const formattedDate = getDate(parseISO(byline));
+  const formattedDate = getDate(parseISO(byline as string));
   return (
     <Link href={href} as={as}>
       <a
@@ -45,7 +45,7 @@ export function ListItem({
               }`}
             >
               <div className="text-xs w-12 pt-2">
-                {format(parseISO(byline), "MMM")}
+                {format(parseISO(byline as string), "MMM")}
               </div>
               <div className="text-2xl text-slate-100 font-semibold w-12 pb-2">
                 {formattedDate}
