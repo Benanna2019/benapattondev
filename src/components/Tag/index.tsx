@@ -6,7 +6,10 @@ export function Tags({ tags }: any) {
   return (
     <div className="flex flex-wrap space-x-2">
       {tags.map((tag: any) => (
-        <Tag key={tag.name} name={tag.name} />
+        <Tag
+          key={tag.name ? tag.name : tag.title}
+          name={tag.name ? tag.name : tag.title}
+        />
       ))}
     </div>
   );
@@ -41,7 +44,102 @@ export function Tag({ name }: any) {
       }
       case "reading": {
         specificClasses =
+          "border-green-200 text-green-600 dark:text-green-300 bg-green-200 bg-opacity-5 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "developer": {
+        specificClasses =
           "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "developer relations": {
+        specificClasses =
+          "border-fuchsia-200 text-fuchsia-600 dark:text-fuchsia-300 bg-fuchsia-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "developer experience": {
+        specificClasses =
+          "border-fuchsia-200 text-fuchsia-600 dark:text-fuchsia-300 bg-fuchsia-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "technical": {
+        specificClasses =
+          "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "guides": {
+        specificClasses =
+          "border-sky-200 text-sky-600 dark:text-sky-300 bg-sky-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "part time creator": {
+        specificClasses =
+          "border-orange-200 text-orange-600 dark:text-orange-300 bg-orange-200 bg-opacity-5 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "work": {
+        specificClasses =
+          "border-cyan-200 text-cyan-600 dark:text-cyan-300 bg-cyan-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "productivity": {
+        specificClasses =
+          "border-teal-200 text-teal-600 dark:text-teal-300 bg-teal-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "random thoughts": {
+        specificClasses =
+          "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "nextjs": {
+        specificClasses =
+          "border-blue-200 text-blue-600 dark:text-blue-300 bg-blue-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "networking": {
+        specificClasses =
+          "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "junior developer": {
+        specificClasses =
+          "border-lime-200 text-lime-600 dark:text-lime-300 bg-lime-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "javascript": {
+        specificClasses =
+          "border-yellow-200 text-yellow-600 dark:text-yellow-300 bg-yellow-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "coding bootcamp": {
+        specificClasses =
+          "border-indigo-200 text-indigo-600 dark:text-indigo-300 bg-indigo-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "career changer": {
+        specificClasses =
+          "border-violet-200 text-violet-600 dark:text-violet-300 bg-violet-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "design patterns": {
+        specificClasses =
+          "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "react": {
+        specificClasses =
+          "border-sky-200 text-sky-600 dark:text-sky-300 bg-sky-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "svelte": {
+        specificClasses =
+          "border-red-200 text-red-600 dark:text-red-300 bg-red-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
+      case "serverless": {
+        specificClasses =
+          "border-yellow-200 text-yellow-600 dark:text-yellow-300 bg-yellow-300 bg-opacity-5 dark:bg-opacity-10 hover:bg-opacity-40";
         break;
       }
       case "__clear_tag_picker": {

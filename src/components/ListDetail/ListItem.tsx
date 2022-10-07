@@ -35,45 +35,87 @@ export function ListItem({
         }`}
       >
         {leadingAccessory && <>{leadingAccessory}</>}
-        <div className="flex justify-between space-x-5 space-y-1">
-          {byline && (
-            <div
-              className={`flex flex-col justify-center text-center w-18 bg-gray-800 rounded-lg ${
-                active
-                  ? "text-white text-opacity-90"
-                  : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
-              }`}
-            >
-              <div className="text-xs w-12 pt-2">
-                {format(parseISO(byline as string), "MMM")}
-              </div>
-              <div className="text-2xl text-slate-100 font-semibold w-12 pb-2">
-                {formattedDate}
-              </div>
-            </div>
-          )}
-          <div className="flex flex-col justify-center">
-            <div
-              className={`font-medium line-clamp-1 ${
-                active
-                  ? "text-white font-bold"
-                  : "text-gray-1000 dark:text-white"
-              }`}
-            >
-              {title}
-            </div>
-            {description && (
+        <div
+          className={`${
+            byline && typeof byline === "string"
+              ? "flex justify-between space-x-5 space-y-1"
+              : "flex flex-col justify-center"
+          }`}
+        >
+          {byline && typeof byline === "string" ? (
+            <>
               <div
-                className={`line-clamp-1 ${
+                className={`flex flex-col justify-center text-center w-18 bg-gray-800 rounded-lg ${
                   active
-                    ? "text-white text-opacity-80"
-                    : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                    ? "text-white text-opacity-90"
+                    : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
                 }`}
               >
-                {description}
+                <div className="text-xs w-12 pt-2">
+                  {format(parseISO(byline), "MMM")}
+                </div>
+                <div className="text-2xl text-slate-100 font-semibold w-12 pb-2">
+                  {formattedDate}
+                </div>
               </div>
-            )}
-          </div>
+              <div className="flex flex-col justify-center">
+                <div
+                  className={`font-medium line-clamp-1 ${
+                    active
+                      ? "text-white font-bold"
+                      : "text-gray-1000 dark:text-white"
+                  }`}
+                >
+                  {title}
+                </div>
+                {description && (
+                  <div
+                    className={`line-clamp-1 ${
+                      active
+                        ? "text-white text-opacity-80"
+                        : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                    }`}
+                  >
+                    {description}
+                  </div>
+                )}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex flex-col justify-center">
+                <div
+                  className={`font-medium line-clamp-1 ${
+                    active
+                      ? "text-white font-bold"
+                      : "text-gray-1000 dark:text-white"
+                  }`}
+                >
+                  {title}
+                </div>
+                {description && (
+                  <div
+                    className={`line-clamp-1 ${
+                      active
+                        ? "text-white text-opacity-80"
+                        : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                    }`}
+                  >
+                    {description}
+                  </div>
+                )}
+                <div
+                  className={`line-clamp-1 ${
+                    active
+                      ? "text-white text-opacity-90"
+                      : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
+                  }`}
+                >
+                  {byline}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </a>
     </Link>

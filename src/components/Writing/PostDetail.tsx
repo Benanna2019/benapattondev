@@ -4,6 +4,7 @@ import { timestampToCleanTime } from "../../../lib/transformers";
 import { Detail } from "../ListDetail/Detail";
 import { TitleBar } from "../ListDetail/TitleBar";
 import { MarkdownRenderer } from "../MarkdownRenderer";
+import { Tags } from "../Tag";
 
 export default function PostDetail({ postInfo }: any) {
   const scrollContainerRef = React.useRef(null);
@@ -41,6 +42,7 @@ export default function PostDetail({ postInfo }: any) {
 
         <Detail.ContentContainer>
           <Detail.Header>
+            <Tags tags={post[0].categories} />
             <Detail.Title ref={titleRef}>{post[0].title}</Detail.Title>
             <span
               title={publishedAt.raw}
