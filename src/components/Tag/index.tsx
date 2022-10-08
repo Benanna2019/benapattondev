@@ -67,6 +67,11 @@ export function Tag({ name }: any) {
           "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
         break;
       }
+      case "draft": {
+        specificClasses =
+          "border-gray-200 text-gray-600 dark:text-gray-300 bg-gray-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
+        break;
+      }
       case "guides": {
         specificClasses =
           "border-sky-200 text-sky-600 dark:text-sky-300 bg-sky-200 bg-opacity-30 dark:bg-opacity-10 hover:bg-opacity-40";
