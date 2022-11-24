@@ -9,6 +9,7 @@ import {
   LinksIcon,
   LinkedInIcon,
   AppDissectionIcon,
+  NewsletterIcon,
 } from "../Icon";
 import { NavigationLink } from "./NavigationLink";
 
@@ -56,6 +57,15 @@ export function SidebarNavigation() {
           href: "https://careerchangers.co",
           label: "Career Changers",
           icon: AppDissectionIcon,
+          trailingAccessory: ExternalLinkIcon,
+          isActive: false,
+          trailingAction: null,
+          isExternal: true,
+        },
+        {
+          href: "https://ed76h05au5.execute-api.us-east-2.amazonaws.com/",
+          label: "My Resume",
+          icon: NewsletterIcon,
           trailingAccessory: ExternalLinkIcon,
           isActive: false,
           trailingAction: null,

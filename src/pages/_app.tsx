@@ -5,6 +5,7 @@ import { withTRPC } from "@trpc/next";
 import type { AppType } from "next/dist/shared/lib/utils";
 import superjson from "superjson";
 import { Providers } from "../components/Providers";
+import { Analytics } from "@vercel/analytics/react";
 import type { AppRouter } from "../server/router";
 import "../styles/globals.css";
 
@@ -12,6 +13,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <Providers>
       <Component {...pageProps} />
+      <Analytics />
     </Providers>
   );
 };
