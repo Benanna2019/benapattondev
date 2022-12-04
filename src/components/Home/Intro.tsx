@@ -12,14 +12,14 @@ import WritingHighlightCard from "../Writing/WritingHighlightCard";
 function SectionTitle(props: any) {
   return (
     <h4
-      className="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40"
+      className="col-span-2 pt-8 text-lg font-extrabold md:pt-0 md:text-right md:text-base md:font-normal md:text-opacity-40"
       {...props}
     />
   );
 }
 
 function SectionContent(props: any) {
-  return <div className="col-span-10" {...props} />;
+  return <div className="col-span-10 text-mahogony" {...props} />;
 }
 
 interface TableRowProps {
@@ -37,10 +37,10 @@ function TableRow({ href, title, subtitle, date }: TableRowProps) {
       href={href}
       className="group flex items-center space-x-4"
     >
-      <strong className="flex-none font-medium text-gray-1000 group-hover:text-yala-purple group-hover:underline dark:text-gray-100 dark:group-hover:text-yala-purple">
+      <strong className="flex-none font-medium group-hover:underline">
         {title}
       </strong>
-      <span className="w-full shrink border-t border-dashed border-gray-300 dark:border-gray-800" />
+      <span className="w-full shrink border-t border-dashed border-gray-300" />
       {subtitle && <span className="text-tertiary flex-none">{subtitle}</span>}
       {date && (
         <span className="text-quaternary flex-none font-mono">{date}</span>
@@ -110,7 +110,7 @@ export function Intro() {
           <SectionContainer>
             <SectionTitle />
             <SectionContent>
-              <div className="text-primary prose">
+              <div className="text-mahogony prose">
                 <p>
                   Hey, I&apos;m Ben. I&apos;m a developer and{" "}
                   <Link href="/writing">
@@ -138,7 +138,7 @@ export function Intro() {
                   functional programming libraries (ramda and lodash), and
                   expanding my cloud knowledge.
                 </p>
-                <h2 className="mt-5 mb-5">A Little Background</h2>
+                <h2 className="mt-5 mb-5 text-mahogony">A Little Background</h2>
                 <p>
                   My aim in life is to care for and love others and to use code,
                   writing, time, etc to that end.
@@ -152,7 +152,7 @@ export function Intro() {
                   non-profit days are the catalyst for much of my thinking and
                   how I hope to impact the world through software.
                 </p>
-                <h2 className="">Writing Highlights</h2>
+                <h2 className="text-mahogony">Writing Highlights</h2>
                 <div className="flex gap-6 flex-col md:flex-row">
                   {isLoading || isError || !data?.featuredArticles
                     ? null
@@ -161,12 +161,12 @@ export function Intro() {
                           key={featuredArticle.featuredArticle[0]._id}
                           title={featuredArticle.featuredArticle[0].title}
                           slug={featuredArticle.featuredArticle[0].slug.current}
-                          gradient="from-[#6441A5] to-[#9D6EFF]"
+                          gradient="from-[#a73221] to-[#a73221]"
                         />
                       ))}
                 </div>
                 <Link href="/writing">
-                  <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-yala-purple transition-all h-6">
+                  <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 transition-all h-6">
                     Read all posts
                   </a>
                 </Link>

@@ -31,6 +31,7 @@ module.exports = {
         twitter: "#479BEA",
         current: "currentColor",
         "yala-purple": "#9D6EFF",
+        mahogony: "#a73221",
       },
       boxShadow: {
         xs: "0 1px 2px 0px rgba(0,0,0,0.03)",

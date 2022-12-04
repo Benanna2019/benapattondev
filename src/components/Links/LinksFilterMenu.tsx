@@ -31,7 +31,7 @@ export function LinksFilterMenu() {
             <>
               <Menu.Button as="div" className="relative z-0 inline-flex">
                 {tag && (
-                  <div className="absolute top-1 right-1 h-3 w-3 rounded-full border-2 border-white bg-blue-500 dark:border-gray-900" />
+                  <div className="absolute top-1 right-1 h-3 w-3 rounded-full border-2 border-white bg-blue-500 " />
                 )}
                 <GhostButton aria-label="Filter links" size="small-square">
                   <svg
@@ -62,7 +62,7 @@ export function LinksFilterMenu() {
               >
                 <Menu.Items
                   static
-                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-200 bg-white shadow-sm outline-none dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-800"
+                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-200 bg-white shadow-sm outline-none "
                 >
                   <div className="flex flex-col space-y-2 py-2">
                     <Menu.Item>
@@ -72,8 +72,8 @@ export function LinksFilterMenu() {
                           onClick={() => setTag(null)}
                           className={`${
                             active
-                              ? "bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-white"
-                              : "text-gray-900 dark:text-gray-200"
+                              ? "bg-gray-100 text-mahogony "
+                              : "text-mahogony"
                           } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm`}
                         >
                           All Links
@@ -89,8 +89,8 @@ export function LinksFilterMenu() {
                             onClick={() => setTag(t.name as string)}
                             className={`${
                               active
-                                ? "bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-white"
-                                : "text-gray-900 dark:text-gray-200"
+                                ? "bg-gray-100 text-mahogony "
+                                : "text-mahogony"
                             } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm capitalize`}
                           >
                             {tag === t.name ? (

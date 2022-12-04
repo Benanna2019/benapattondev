@@ -12,7 +12,7 @@ function ContentContainer(
 ) {
   return (
     <div
-      className="mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:px-8"
+      className="mx-auto w-full max-w-3xl px-4 py-12 pb-10 md:px-8 text-mahogony"
       {...props}
     />
   );
@@ -29,7 +29,7 @@ const Container = React.forwardRef<HTMLDivElement, DetailContainerProps>(
       <div
         ref={ref}
         id="main"
-        className="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white dark:bg-black"
+        className="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white"
         {...props}
       />
     );

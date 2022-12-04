@@ -13,9 +13,6 @@ const LinkDetailPage: NextPage = () => {
     { slug: slug as string },
   ]);
 
-  console.log("slug from link detial page: ", slug);
-  console.log("linkInfo from link detail page: ", linkInfo);
-
   return (
     <SiteLayout>
       <ListDetailView

@@ -29,9 +29,7 @@ export function ListItem({
       <a
         onClick={onClick && onClick}
         className={`flex space-x-3 border-b border-gray-100 py-3 px-3.5 text-sm dark:border-gray-900 lg:rounded-sm lg:border-none lg:py-2  ${
-          active
-            ? "bg-black dark:bg-yala-purple"
-            : "sm:hover:bg-gray-200 sm:dark:hover:bg-yala-purple"
+          active ? "text-mahogony" : ""
         }`}
       >
         {leadingAccessory && <>{leadingAccessory}</>}
@@ -45,25 +43,23 @@ export function ListItem({
           {byline && typeof byline === "string" ? (
             <>
               <div
-                className={`flex flex-col justify-center text-center w-18 bg-gray-800 rounded-lg ${
+                className={`flex flex-col justify-center text-center w-18  rounded-lg ${
                   active
-                    ? "text-white text-opacity-90"
-                    : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
+                    ? "text-mahogony font-bold text-opacity-90 bg-slate-100 "
+                    : "text-mahogony text-opacity-80"
                 }`}
               >
                 <div className="text-xs w-12 pt-2">
                   {format(parseISO(byline), "MMM")}
                 </div>
-                <div className="text-2xl text-slate-100 font-semibold w-12 pb-2">
+                <div className="text-2xl text-mahogony font-semibold w-12 pb-2">
                   {formattedDate}
                 </div>
               </div>
               <div className="flex flex-col justify-center">
                 <div
                   className={`font-medium line-clamp-1 ${
-                    active
-                      ? "text-white font-bold"
-                      : "text-gray-1000 dark:text-white"
+                    active ? "text-mahogony font-bold" : "text-mahogony"
                   }`}
                 >
                   {title}
@@ -72,8 +68,8 @@ export function ListItem({
                   <div
                     className={`line-clamp-1 ${
                       active
-                        ? "text-white text-opacity-80"
-                        : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                        ? "text-mahogony font-semibold"
+                        : "text-mahogony text-opacity-80"
                     }`}
                   >
                     {description}
@@ -86,9 +82,7 @@ export function ListItem({
               <div className="flex flex-col justify-center">
                 <div
                   className={`font-medium line-clamp-1 ${
-                    active
-                      ? "text-white font-bold"
-                      : "text-gray-1000 dark:text-white"
+                    active ? "text-mahogony font-bold" : "text-mahogony"
                   }`}
                 >
                   {title}
@@ -97,8 +91,8 @@ export function ListItem({
                   <div
                     className={`line-clamp-1 ${
                       active
-                        ? "text-white text-opacity-80"
-                        : "text-gray-1000 text-opacity-60 dark:text-slate-300"
+                        ? "text-mahogony text-opacity-80"
+                        : "text-mahogony text-opacity-60 "
                     }`}
                   >
                     {description}
@@ -107,8 +101,8 @@ export function ListItem({
                 <div
                   className={`line-clamp-1 ${
                     active
-                      ? "text-white text-opacity-90"
-                      : "text-gray-1000 text-opacity-40 dark:text-white dark:text-opacity-60"
+                      ? "text-mahogony text-opacity-90"
+                      : "text-mahogony text-opacity-40 "
                   }`}
                 >
                   {byline}

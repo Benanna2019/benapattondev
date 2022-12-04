@@ -38,16 +38,16 @@ export function NavigationLink({
           rel={isExternal ? "noopener noreferrer" : undefined}
           className={`flex flex-1 items-center space-x-3 rounded-md px-2 py-1.5 text-sm font-medium  ${
             isActive
-              ? "bg-yala-purple text-white hover:bg-black hover:text-white dark:bg-yala-purple dark:text-white dark:hover:bg-yala-purple dark:hover:text-white"
-              : "text-gray-700 dark:text-gray-200 sm:hover:bg-gray-200 sm:hover:text-gray-900 sm:dark:hover:bg-yala-purple sm:dark:hover:text-gray-200"
+              ? "text-mahogony hover:bg-mahogony hover:bg-opacity-20"
+              : "text-mahogony sm:hover:bg-mahogony sm:hover:bg-opacity-20"
           }`}
         >
-          <span className="flex items-center justify-center w-4">
+          <span className="flex items-center justify-center w-4 text-mahogony">
             <Icon />
           </span>
           <span className="flex-1">{label}</span>
           {Accessory && (
-            <span className="flex items-center justify-center w-4 text-black text-opacity-40 dark:text-white">
+            <span className="flex items-center justify-center w-4 text-mahogony">
               <Accessory />
             </span>
           )}

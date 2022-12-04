@@ -16,19 +16,19 @@
     bottom: -50%;
     left: -50%;
     z-index: -1;
-    @apply bg-white dark:bg-black;
+    @apply bg-white;
   }
 }
 
 @layer components {
   /* needed to override tailwind forms styles */
   select {
-    @apply w-full px-4 py-2 border border-gray-200 rounded outline-none text-primary bg-gray-1000 bg-opacity-5 hover:bg-opacity-10 focus:border-gray-1000 focus:outline-none focus:ring-0 dark:border-gray-800 dark:bg-white dark:focus:border-gray-600;
+    @apply w-full px-4 py-2 border border-mahogony rounded outline-none text-primary bg-opacity-5 hover:bg-opacity-10 focus:border-gray-1000 focus:outline-none focus:ring-0;
   }
 
   button:focus,
   a:focus {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-blue-500 dark:ring-offset-black;
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white;
   }
 
   button:active:not(:focus-visible),
@@ -40,16 +40,16 @@
 
   input[type="text"],
   textarea {
-    @apply bg-white border border-gray-200 outline-none dark:border-gray-700 dark:bg-gray-800;
+    @apply bg-white border border-gray-200 outline-none;
   }
 
-  input[type="checkbox"] {
+  /* input[type="checkbox"] {
     @apply dark:border-gray-600 dark:bg-gray-700;
-  }
+  } */
 
   input:focus,
   textarea:focus {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white dark:ring-offset-black;
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2 ring-offset-white;
   }
 
   .font-list-heading {
@@ -66,36 +66,36 @@
     background-size: 16px 16px;
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     .bg-dots {
       background: linear-gradient(90deg, #050505 15px, transparent 1%) center,
         linear-gradient(#050505 15px, transparent 1%) center,
         rgba(255, 255, 255, 0.16);
       background-size: 16px 16px;
     }
-  }
+  } */
 }
 
 /* Your own custom utilities */
 @layer utilities {
   .text-primary {
-    @apply text-gray-1000 dark:text-gray-100;
+    @apply text-mahogony;
   }
 
   .text-secondary {
-    @apply text-gray-700 dark:text-gray-300;
+    @apply text-mahogony;
   }
 
   .text-tertiary {
-    @apply text-gray-500 dark:text-gray-400;
+    @apply text-mahogony;
   }
 
   .text-quaternary {
-    @apply text-gray-400 dark:text-gray-500;
+    @apply text-mahogony;
   }
 
   .bg-elevated {
-    @apply bg-gray-400 bg-opacity-5 dark:bg-gray-50;
+    @apply bg-gray-400 bg-opacity-5;
   }
 
   .filter-none {
@@ -116,11 +116,11 @@
   }
 
   .highlight-link-hover {
-    @apply -mx-0.5 rounded-sm bg-opacity-20 px-0.5 text-gray-1000 no-underline dark:bg-opacity-100 dark:text-gray-300 md:hover:bg-yellow-400 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000;
+    @apply -mx-0.5 rounded-sm bg-opacity-20 px-0.5 text-gray-1000 no-underline md:hover:bg-yellow-400 md:hover:bg-opacity-30;
   }
 
   .highlight-link {
-    @apply -mx-0.5 bg-opacity-20 px-0.5 text-gray-1000 dark:bg-gray-100 dark:bg-opacity-20 dark:text-gray-300 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000;
+    @apply -mx-0.5 bg-opacity-20 px-0.5 text-gray-1000 md:hover:bg-opacity-30;
   }
 
   .blink {
@@ -308,11 +308,11 @@
 /* Prose Styles */
 
 .prose {
-  @apply text-gray-700 dark:text-gray-400;
+  @apply text-mahogony;
 }
 
 .prose blockquote {
-  @apply font-normal border-l-2 border-gray-200 dark:border-gray-800 dark:text-gray-400;
+  @apply font-normal border-l-2 border-gray-200;
 }
 
 .prose figure {
@@ -324,15 +324,15 @@
 }
 
 .prose a {
-  @apply font-normal text-blue-600 no-underline break-words hover:underline dark:text-blue-500;
+  @apply font-normal text-blue-600 no-underline break-words hover:underline;
 }
 
 .prose a code {
-  @apply text-blue-600 dark:text-blue-500;
+  @apply text-blue-600;
 }
 
 .prose table {
-  @apply my-2 border border-gray-200 rounded-md text-gray-1000 dark:border-gray-800 dark:text-gray-50;
+  @apply my-2 border border-gray-200 rounded-md text-gray-1000;
 }
 
 .prose.comment table {
@@ -340,7 +340,7 @@
 }
 
 .prose thead {
-  @apply text-gray-800 dark:text-gray-200;
+  @apply text-gray-800;
 }
 
 .prose thead th {
@@ -351,29 +351,29 @@
 .prose thead th,
 .prose tbody th,
 .prose tbody td {
-  @apply p-2 border-r border-gray-200 dark:border-gray-800;
+  @apply p-2 border-r border-gray-200;
   padding-left: 1rem !important;
 }
 
 .prose tbody tr {
-  @apply border-b border-gray-200 dark:border-gray-800;
+  @apply border-b border-gray-200;
 }
 
 .prose thead tr {
-  @apply border-b-2 border-gray-200 dark:border-gray-800;
+  @apply border-b-2 border-gray-200;
 }
 
 .prose tbody tr:nth-child(2n) {
-  @apply bg-gray-50 dark:bg-gray-900;
+  @apply bg-gray-50;
 }
 
 .prose b,
 .prose strong {
-  @apply font-bold text-gray-900 dark:text-gray-300;
+  @apply font-bold text-gray-900;
 }
 
 .prose hr {
-  @apply border-gray-200 dark:border-gray-800;
+  @apply border-gray-200;
 }
 
 /* the kg-embed-card gets applied to iframes sent from Ghost. this preserves a good video aspect ratio */
@@ -397,7 +397,7 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  @apply font-sans font-bold text-gray-900 dark:text-gray-100;
+  @apply font-sans font-bold text-mahogony;
   scroll-margin-top: 4rem;
 }
 
@@ -407,7 +407,7 @@
 .prose h4 a,
 .prose h5 a,
 .prose h6 a {
-  @apply font-sans font-bold no-underline text-gray-1000 dark:text-gray-100;
+  @apply font-sans font-bold no-underline text-gray-1000;
 }
 
 .prose h5 {
@@ -415,7 +415,7 @@
 }
 
 .prose pre {
-  @apply px-8 py-6 space-y-4 text-sm text-gray-800 bg-gray-400 border-gray-300 rounded-md bg-opacity-5 dark:border-gray-800 dark:text-gray-200;
+  @apply px-8 py-6 space-y-4 text-sm text-gray-800 bg-gray-400 border-gray-300 rounded-md bg-opacity-5;
 }
 
 .prose.comment {
@@ -459,7 +459,7 @@
 }
 
 .prose code {
-  @apply rounded-md border-gray-100 bg-gray-100 px-1 py-0.5 text-gray-800 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200;
+  @apply rounded-md border-gray-100 bg-gray-100 px-1 py-0.5 text-gray-800;
 }
 
 .prose code,
@@ -477,7 +477,7 @@
 }
 
 .prose sup {
-  @apply text-sm text-blue-500 dark:text-gray-400;
+  @apply text-sm text-blue-500;
   vertical-align: super;
   top: 0px;
   position: relative;
