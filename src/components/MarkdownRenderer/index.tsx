@@ -14,29 +14,29 @@ import { CodeBlock } from "./CodeBlock";
 function LinkRenderer({ href, ...rest }: any) {
   // auto-link headings
   if (href.startsWith("#")) {
-    return <a className="hover:text-yala-purple" href={href} {...rest} />;
+    return <a className="hover:text-blue-500" href={href} {...rest} />;
   }
 
   if (href.startsWith("@")) {
     // link to a mention
     return (
       <Link href={`/u/${href.slice(1)}`} {...rest}>
-        <a className="hover:text-yala-purple" {...rest} />
+        <a className="hover:text-blue-500" {...rest} />
       </Link>
     );
   }
   try {
     const url = new URL(href);
-    if (url.origin === "https://brianlovin.com") {
+    if (url.origin === "https://benapatton.dev") {
       return (
         <Link href={href}>
-          <a className="hover:text-yala-purple" {...rest} />
+          <a className="hover:text-blue-500" {...rest} />
         </Link>
       );
     }
     return (
       <a
-        className="hover:text-yala-purple"
+        className="hover:text-blue-500"
         target="_blank"
         rel="noopener noreferrer"
         href={href}
@@ -47,7 +47,7 @@ function LinkRenderer({ href, ...rest }: any) {
     console.error(e);
     return (
       <a
-        className="hover:text-yala-purple"
+        className="hover:text-blue-500"
         target="_blank"
         rel="noopener noreferrer"
         href={href}

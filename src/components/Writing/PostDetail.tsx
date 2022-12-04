@@ -52,7 +52,10 @@ export default function PostDetail({ postInfo }: any) {
             </span>
           </Detail.Header>
 
-          <MarkdownRenderer children={post[0].body} className="prose mt-8" />
+          <MarkdownRenderer
+            children={post[0].body}
+            className="text-mahogony mt-8"
+          />
 
           {/* bottom padding to give space between post content and comments */}
           <div className="py-6" />
