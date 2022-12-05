@@ -72,8 +72,8 @@ export function LinksFilterMenu() {
                           onClick={() => setTag(null)}
                           className={`${
                             active
-                              ? "bg-gray-100 text-mahogony "
-                              : "text-mahogony"
+                              ? "bg-gray-100 text-tropical-rain-forest "
+                              : "text-tropical-rain-forest"
                           } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm`}
                         >
                           All Links
@@ -89,8 +89,8 @@ export function LinksFilterMenu() {
                             onClick={() => setTag(t.name as string)}
                             className={`${
                               active
-                                ? "bg-gray-100 text-mahogony "
-                                : "text-mahogony"
+                                ? "bg-gray-100 text-tropical-rain-forest "
+                                : "text-tropical-rain-forest"
                             } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm capitalize`}
                           >
                             {tag === t.name ? (

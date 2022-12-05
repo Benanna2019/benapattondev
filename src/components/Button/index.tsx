@@ -129,7 +129,7 @@ export const RecordingButton = React.forwardRef((props: ButtonProps, ref) => {
 });
 
 export const GhostButton = React.forwardRef((props: ButtonProps, ref) => {
-  const classes = `text-mahogony bg-gray-100 bg-opacity-0 hover:bg-opacity-100 `;
+  const classes = `text-tropical-rain-forest bg-gray-100 bg-opacity-0 hover:bg-opacity-100 `;
   const size = composer.getSize(props.size);
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);

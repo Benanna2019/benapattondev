@@ -137,7 +137,7 @@ export function SidebarNavigation() {
             {section.label && (
               <h4
                 key={i}
-                className="px-2 pt-5 pb-2 text-xs font-semibold text-mahogony"
+                className="px-2 pt-5 pb-2 text-xs font-semibold text-tropical-rain-forest"
               >
                 {section.label}
               </h4>

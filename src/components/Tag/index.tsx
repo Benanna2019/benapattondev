@@ -38,7 +38,8 @@ export function Tag({ name }: any) {
         break;
       }
       case "website": {
-        specificClasses = "border-red-200 text-white bg-mahogony bg-opacity-80";
+        specificClasses =
+          "border-red-200 text-white bg-tropical-rain-forest bg-opacity-80";
         break;
       }
       case "reading": {

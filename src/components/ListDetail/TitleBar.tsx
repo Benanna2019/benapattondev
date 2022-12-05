@@ -102,7 +102,7 @@ export function TitleBar({
     const isDarkMode =
       window?.matchMedia &&
       window?.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (isDarkMode) setDarkMode(true);
+    if (isDarkMode) setDarkMode(false); // set to true when I have a 'dark mode' color theme
   }, []);
 
   return (

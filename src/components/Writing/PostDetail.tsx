@@ -54,7 +54,7 @@ export default function PostDetail({ postInfo }: any) {
 
           <MarkdownRenderer
             children={post[0].body}
-            className="text-mahogony mt-8"
+            className="prose text-tropical-rain-forest mt-8"
           />
 
           {/* bottom padding to give space between post content and comments */}

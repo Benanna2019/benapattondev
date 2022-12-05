@@ -29,7 +29,7 @@ export function ListItem({
       <a
         onClick={onClick && onClick}
         className={`flex space-x-3 border-b border-gray-100 py-3 px-3.5 text-sm dark:border-gray-900 lg:rounded-sm lg:border-none lg:py-2  ${
-          active ? "text-mahogony" : ""
+          active ? "text-tropical-rain-forest" : ""
         }`}
       >
         {leadingAccessory && <>{leadingAccessory}</>}
@@ -45,21 +45,23 @@ export function ListItem({
               <div
                 className={`flex flex-col justify-center text-center w-18  rounded-lg ${
                   active
-                    ? "text-mahogony font-bold text-opacity-90 bg-slate-100 "
-                    : "text-mahogony text-opacity-80"
+                    ? "text-tropical-rain-forest font-bold text-opacity-90 bg-slate-100 "
+                    : "text-tropical-rain-forest text-opacity-80"
                 }`}
               >
                 <div className="text-xs w-12 pt-2">
                   {format(parseISO(byline), "MMM")}
                 </div>
-                <div className="text-2xl text-mahogony font-semibold w-12 pb-2">
+                <div className="text-2xl text-tropical-rain-forest font-semibold w-12 pb-2">
                   {formattedDate}
                 </div>
               </div>
               <div className="flex flex-col justify-center">
                 <div
                   className={`font-medium line-clamp-1 ${
-                    active ? "text-mahogony font-bold" : "text-mahogony"
+                    active
+                      ? "text-tropical-rain-forest font-bold"
+                      : "text-tropical-rain-forest"
                   }`}
                 >
                   {title}
@@ -68,8 +70,8 @@ export function ListItem({
                   <div
                     className={`line-clamp-1 ${
                       active
-                        ? "text-mahogony font-semibold"
-                        : "text-mahogony text-opacity-80"
+                        ? "text-tropical-rain-forest font-semibold"
+                        : "text-tropical-rain-forest text-opacity-80"
                     }`}
                   >
                     {description}
@@ -82,7 +84,9 @@ export function ListItem({
               <div className="flex flex-col justify-center">
                 <div
                   className={`font-medium line-clamp-1 ${
-                    active ? "text-mahogony font-bold" : "text-mahogony"
+                    active
+                      ? "text-tropical-rain-forest font-bold"
+                      : "text-tropical-rain-forest"
                   }`}
                 >
                   {title}
@@ -91,8 +95,8 @@ export function ListItem({
                   <div
                     className={`line-clamp-1 ${
                       active
-                        ? "text-mahogony text-opacity-80"
-                        : "text-mahogony text-opacity-60 "
+                        ? "text-tropical-rain-forest text-opacity-80"
+                        : "text-tropical-rain-forest text-opacity-60 "
                     }`}
                   >
                     {description}
@@ -101,8 +105,8 @@ export function ListItem({
                 <div
                   className={`line-clamp-1 ${
                     active
-                      ? "text-mahogony text-opacity-90"
-                      : "text-mahogony text-opacity-40 "
+                      ? "text-tropical-rain-forest text-opacity-90"
+                      : "text-tropical-rain-forest text-opacity-40 "
                   }`}
                 >
                   {byline}

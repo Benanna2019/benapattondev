@@ -19,8 +19,6 @@ export function RelatedLinks({ link }: any) {
     (link: any) => link.host === host && link.url !== url
   );
 
-  console.log("related value on filtering the host", related);
-
   if (related.length === 0) return null;
 
   function handleClick(e: any) {

@@ -14,14 +14,16 @@ import { CodeBlock } from "./CodeBlock";
 function LinkRenderer({ href, ...rest }: any) {
   // auto-link headings
   if (href.startsWith("#")) {
-    return <a className="hover:text-blue-500" href={href} {...rest} />;
+    return (
+      <a className="hover:text-tropical-rain-forest " href={href} {...rest} />
+    );
   }
 
   if (href.startsWith("@")) {
     // link to a mention
     return (
       <Link href={`/u/${href.slice(1)}`} {...rest}>
-        <a className="hover:text-blue-500" {...rest} />
+        <a className="hover:text-tropical-rain-forest " {...rest} />
       </Link>
     );
   }
@@ -30,13 +32,16 @@ function LinkRenderer({ href, ...rest }: any) {
     if (url.origin === "https://benapatton.dev") {
       return (
         <Link href={href}>
-          <a className="hover:text-blue-500" {...rest} />
+          <a
+            className="hover:text-tropical-rain-forest  hover:text-opacity-20"
+            {...rest}
+          />
         </Link>
       );
     }
     return (
       <a
-        className="hover:text-blue-500"
+        className="hover:text-tropical-rain-forest "
         target="_blank"
         rel="noopener noreferrer"
         href={href}
@@ -47,7 +52,7 @@ function LinkRenderer({ href, ...rest }: any) {
     console.error(e);
     return (
       <a
-        className="hover:text-blue-500"
+        className="hover:text-tropical-rain-forest "
         target="_blank"
         rel="noopener noreferrer"
         href={href}
