@@ -19,7 +19,7 @@ function SectionTitle(props: any) {
 }
 
 function SectionContent(props: any) {
-  return <div className="col-span-10 text-mahogony" {...props} />;
+  return <div className="col-span-10 text-tropical-rain-forest" {...props} />;
 }
 
 interface TableRowProps {
@@ -110,7 +110,59 @@ export function Intro() {
           <SectionContainer>
             <SectionTitle />
             <SectionContent>
-              <div className="text-mahogony prose">
+              <div className="text-primary prose">
+                <h2 className="pt-2">Credit and Thanks</h2>
+                <p className="italic font-bold pt-4">
+                  Credit where it is due. I borrowed layout and styles from{" "}
+                  <a
+                    href="https://brianlovin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Brian Lovin
+                  </a>{" "}
+                  and inspiration from daily use of{" "}
+                  <a
+                    href="https://dayoneapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Day One Journaling App
+                  </a>
+                  . Other pieces of the site were inspired from{" "}
+                  <a
+                    href="https://swyx.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Swyx
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="https://leerob.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lee Robinson
+                  </a>
+                  . One of my favorite articles by David Perell is{" "}
+                  <a
+                    href="https://perell.com/essay/imitate-then-innovate/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Imitate, Then Innovate
+                  </a>
+                  , so that is my aim here. Gradually make it my own but start
+                  with something I love.
+                </p>
+              </div>
+            </SectionContent>
+          </SectionContainer>
+          <SectionContainer>
+            <SectionTitle />
+            <SectionContent>
+              <div className="text-tropical-rain-forest prose">
                 <p>
                   Hey, I&apos;m Ben. I&apos;m a developer and{" "}
                   <Link href="/writing">
@@ -120,7 +172,7 @@ export function Intro() {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-yala-purple"
+                    className="hover:text-tropical-rain-forest"
                     href="https://careerchangers.co"
                   >
                     newsletter{" "}
@@ -138,7 +190,9 @@ export function Intro() {
                   functional programming libraries (ramda and lodash), and
                   expanding my cloud knowledge.
                 </p>
-                <h2 className="mt-5 mb-5 text-mahogony">A Little Background</h2>
+                <h2 className="mt-5 mb-5 text-tropical-rain-forest">
+                  A Little Background
+                </h2>
                 <p>
                   My aim in life is to care for and love others and to use code,
                   writing, time, etc to that end.
@@ -152,7 +206,9 @@ export function Intro() {
                   non-profit days are the catalyst for much of my thinking and
                   how I hope to impact the world through software.
                 </p>
-                <h2 className="text-mahogony">Writing Highlights</h2>
+                <h2 className="text-tropical-rain-forest">
+                  Writing Highlights
+                </h2>
                 <div className="flex gap-6 flex-col md:flex-row">
                   {isLoading || isError || !data?.featuredArticles
                     ? null
@@ -161,7 +217,7 @@ export function Intro() {
                           key={featuredArticle.featuredArticle[0]._id}
                           title={featuredArticle.featuredArticle[0].title}
                           slug={featuredArticle.featuredArticle[0].slug.current}
-                          gradient="from-[#a73221] to-[#a73221]"
+                          gradient="from-[#094727] to-[#094727]"
                         />
                       ))}
                 </div>
@@ -253,58 +309,6 @@ export function Intro() {
                       />
                     ))
                   : null}
-              </div>
-            </SectionContent>
-          </SectionContainer>
-          <SectionContainer>
-            <SectionTitle />
-            <SectionContent>
-              <div className="text-primary prose">
-                <h2 className="pt-2">Credit and Thanks</h2>
-                <p className="italic font-bold pt-4">
-                  Credit where it is due. I borrowed layout and styles from{" "}
-                  <a
-                    href="https://brianlovin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Brian Lovin
-                  </a>{" "}
-                  and inspiration from daily use of{" "}
-                  <a
-                    href="https://dayoneapp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Day One Journaling App
-                  </a>
-                  . Other pieces of the site were inspired from{" "}
-                  <a
-                    href="https://swyx.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @Swyx
-                  </a>{" "}
-                  and{" "}
-                  <a
-                    href="https://leerob.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Lee Robinson
-                  </a>
-                  . One of my favorite articles by David Perell is{" "}
-                  <a
-                    href="https://perell.com/essay/imitate-then-innovate/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Imitate, Then Innovate
-                  </a>
-                  , so that is my aim here. Gradually make it my own but start
-                  with something I love.
-                </p>
               </div>
             </SectionContent>
           </SectionContainer>
