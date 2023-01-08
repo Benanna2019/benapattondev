@@ -319,7 +319,7 @@
 }
 
 .prose blockquote {
-  @apply font-normal border-l-2 border-gray-200;
+  @apply text-white font-normal border-l-2 border-slate-200;
 }
 
 .prose figure {
