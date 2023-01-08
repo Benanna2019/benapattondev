@@ -11,9 +11,9 @@ export default function WritingHighlightCard({ title, slug, gradient }: any) {
           gradient
         )}
       >
-        <div className="flex flex-col justify-between h-full bg-white rounded-md p-4">
+        <div className="flex flex-col justify-between h-full bg-space-light rounded-md p-4">
           <div className="flex flex-col md:flex-row justify-between">
-            <h4 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-tropical-rain-forest tracking-tight">
+            <h4 className="text-lg md:text-lg font-medium mb-6 sm:mb-10 w-full text-white tracking-tight">
               {title}
             </h4>
           </div>

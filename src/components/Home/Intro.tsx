@@ -217,7 +217,7 @@ export function Intro() {
                           key={featuredArticle.featuredArticle[0]._id}
                           title={featuredArticle.featuredArticle[0].title}
                           slug={featuredArticle.featuredArticle[0].slug.current}
-                          gradient="from-[#094727] to-[#094727]"
+                          gradient="from-[#fff] to-[#fff]"
                         />
                       ))}
                 </div>
