@@ -16,7 +16,7 @@
     bottom: -50%;
     left: -50%;
     z-index: -1;
-    @apply bg-white;
+    @apply bg-space;
   }
 }
 
@@ -40,7 +40,7 @@
 
   input[type="text"],
   textarea {
-    @apply bg-white border border-gray-200 outline-none;
+    @apply bg-space border border-gray-200 outline-none;
   }
 
   /* input[type="checkbox"] {
@@ -61,10 +61,17 @@
   }
 
   .bg-dots {
+    background: linear-gradient(90deg, #134b5a 15px, transparent 1%) center,
+      linear-gradient(#134b5a 15px, transparent 1%) center,
+      rgba(255, 255, 255, 0.6);
+    background-size: 16px 16px;
+  }
+
+  /* .bg-dots {
     background: linear-gradient(90deg, #f9fafb 15px, transparent 1%) center,
       linear-gradient(#f9fafb 15px, transparent 1%) center, rgba(0, 0, 0, 0.24);
     background-size: 16px 16px;
-  }
+  } */
 
   /* @media (prefers-color-scheme: dark) {
     .bg-dots {

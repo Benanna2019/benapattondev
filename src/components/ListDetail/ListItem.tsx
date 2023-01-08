@@ -43,10 +43,10 @@ export function ListItem({
           {byline && typeof byline === "string" ? (
             <>
               <div
-                className={`flex flex-col justify-center text-center w-18  rounded-lg ${
+                className={`flex flex-col justify-center text-center w-18 rounded-lg ${
                   active
-                    ? "text-tropical-rain-forest font-bold text-opacity-90 bg-slate-100 "
-                    : "text-tropical-rain-forest text-opacity-80"
+                    ? "text-tropical-rain-forest font-bold text-opacity-90 bg-slate-200 bg-opacity-50  "
+                    : "text-tropical-rain-forest text-opacity-80 bg-slate-200 bg-opacity-25"
                 }`}
               >
                 <div className="text-xs w-12 pt-2">

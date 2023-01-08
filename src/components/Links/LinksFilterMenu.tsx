@@ -62,7 +62,7 @@ export function LinksFilterMenu() {
               >
                 <Menu.Items
                   static
-                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-200 bg-white shadow-sm outline-none "
+                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md border border-gray-200 bg-space shadow-sm outline-none "
                 >
                   <div className="flex flex-col space-y-2 py-2">
                     <Menu.Item>
@@ -72,7 +72,7 @@ export function LinksFilterMenu() {
                           onClick={() => setTag(null)}
                           className={`${
                             active
-                              ? "bg-gray-100 text-tropical-rain-forest "
+                              ? "bg-space-light text-tropical-rain-forest "
                               : "text-tropical-rain-forest"
                           } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm`}
                         >
@@ -89,7 +89,7 @@ export function LinksFilterMenu() {
                             onClick={() => setTag(t.name as string)}
                             className={`${
                               active
-                                ? "bg-gray-100 text-tropical-rain-forest "
+                                ? "bg-space-light text-tropical-rain-forest "
                                 : "text-tropical-rain-forest"
                             } text-secondary flex w-full cursor-pointer items-center space-x-2 py-2 px-4 text-sm capitalize`}
                           >

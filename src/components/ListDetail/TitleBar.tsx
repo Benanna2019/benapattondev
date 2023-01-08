@@ -102,19 +102,15 @@ export function TitleBar({
     const isDarkMode =
       window?.matchMedia &&
       window?.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (isDarkMode) setDarkMode(false); // set to true when I have a 'dark mode' color theme
+    if (isDarkMode) setDarkMode(true); // set to true when I have a 'dark mode' color theme
   }, []);
 
   return (
     <>
       <div
         style={{
-          background: `rgba(${darkMode ? "50,50,50" : "255,255,255"},${
-            currentScrollOffset === 0
-              ? currentScrollOffset
-              : darkMode
-              ? currentScrollOffset + 0.5
-              : currentScrollOffset + 0.8
+          background: `rgba(${"50, 50, 50"},${
+           currentScrollOffset + .5
           })`,
           boxShadow: `0 1px 3px rgba(0,0,0,${currentScrollOffset})`,
           minHeight: "48px",
@@ -126,7 +122,7 @@ export function TitleBar({
             {globalMenu && (
               <span
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex cursor-pointer items-center justify-center rounded-md p-2 hover:bg-gray-200  lg:hidden"
+                className="flex cursor-pointer items-center justify-center rounded-md p-2 hover:bg-gray-200 lg:hidden"
               >
                 {isOpen ? (
                   <X size={16} className="text-primary" />

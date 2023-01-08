@@ -29,7 +29,7 @@ const SegmentedControl = ({
     //@ts-ignore
     <AnimateSharedLayout>
       <ol
-        className={`flex list-none rounded-md bg-black bg-opacity-5 p-1 dark:bg-white dark:bg-opacity-5`}
+        className={`flex list-none rounded-md bg-space bg-opacity-5 p-1`}
       >
         {items.map((item, i) => {
           const isActive = items[i]?.id === activeItem;
@@ -47,14 +47,14 @@ const SegmentedControl = ({
                 type="button"
                 className={`relative w-full cursor-pointer bg-transparent px-4 py-1.5 text-xs font-semibold leading-none ${
                   isActive
-                    ? `text-black text-opacity-100 dark:text-white`
-                    : `text-black text-opacity-60 hover:text-opacity-100 dark:text-white`
+                    ? `text-white text-opacity-100`
+                    : `text-white text-opacity-60 hover:text-opacity-100`
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="SegmentedControlActive"
-                    className="z-1 absolute top-0 bottom-0 left-0 right-0 rounded bg-white shadow-sm content-none dark:bg-gray-700"
+                    className="z-1 absolute top-0 bottom-0 left-0 right-0 rounded bg-space shadow-sm content-none"
                   />
                 )}
                 <span className="z-2 relative">{item.label}</span>
